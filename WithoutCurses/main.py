@@ -3,16 +3,16 @@ import os
 import cv2
 
 
-def convert_row_to_ascii(row):
+def convert_row_to_ascii(row) -> tuple:
     density = " .',:;clxokXdO0KN"
     return tuple(density[x // 16] for x in row)[::-1]
 
 
-def convert_to_ascii(input_grays):
+def convert_to_ascii(input_grays) -> tuple:
     return tuple(convert_row_to_ascii(row) for row in input_grays)
 
 
-def print_array(input_ascii_array):
+def print_array(input_ascii_array) -> None:
     print('\n'.join((''.join(row) for row in input_ascii_array)), end='')
 
 
