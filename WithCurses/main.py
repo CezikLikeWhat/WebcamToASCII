@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 
-def video_to_ascii(terminal) -> None:
+def webcam_to_ascii(terminal) -> None:
     init_terminal(terminal)
 
     cap = cv2.VideoCapture(0)
@@ -39,4 +39,4 @@ def init_terminal(terminal) -> None:
 
 
 if __name__ == '__main__':
-    curses.wrapper(video_to_ascii)
+    curses.wrapper(webcam_to_ascii)
